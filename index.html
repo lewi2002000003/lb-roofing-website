@@ -12,21 +12,28 @@
   position: relative;
   isolation: isolate;
 }
+
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(65%, 320px);
+  height: 260px;
   background-image: url("B3618AA5-B01B-484B-BBBA-90618B1F7ECB.jpeg");
-  
-background-position: center 15%;
-background-size: min(85%, 480px);
-opacity: 0.12;
-
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  opacity: 0.18;
   pointer-events: none;
-  mix-blend-mode: screen;
   z-index: 0;
 }
-  .hero > .wrap {
+
+.hero > .wrap {
+  position: relative;
+  z-index: 1;
+}
   position: relative;
   z-index: 1;
 }
